@@ -60,7 +60,8 @@
 
     
     .panel-body{
-      height:270px
+      /* height:270px */
+      padding: 0px
     }
     .loginregisterbody{
       height: auto;
@@ -77,8 +78,8 @@
 
     .mainbody{
       padding: 0px;
-      margin-right:25px;
-      margin-left:25px;
+      margin-right:35px;
+      margin-left:35px;
       width: auto;
       height: 700px;
     }
@@ -113,15 +114,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="{{url('/')}}"><img height="20px" src="{{ URL::to('/images/l1.jpg') }}"/></a>
+      
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        
+        <li><a href="{{url('/')}}"><span class="glyphicon glyphicon-home"></span></a></li>
         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" >Products
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" >Menu
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
+              <li><a href="{{url('items/4')}}">Entree</a></li>
               <li><a href="{{url('items/1')}}">Chicken</a></li>
               <li><a href="{{url('items/2')}}">Lamb</a></li>
               <li><a href="{{url('items/3')}}">Beef</a></li>
@@ -149,6 +151,7 @@
         
           
           {{-- <li><a href=""><span class="glyphicon glyphicon-user"></span>{{ Auth::user()->name }}</a></li> --}}
+          {{-- glyphicon glyphicon-home --}}
       <li><a href="{{url('showcart/'.Auth::user()->id)}}"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
       {{-- <span class="badge badge-light">{{ Cart()->notifications->count() }}</span> --}}
       </li>
@@ -171,14 +174,14 @@
 </div>
 
 
-<div class="text-center footer">
+{{-- <div class="text-center footer">
   <p>Liquor Store Copyright</p>  
     {{-- <form class="form-inline">Get deals:
     <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button> --}}
+    <button type="button" class="btn btn-danger">Sign Up</button> 
   </form> 
   <p></p>  
-</div> 
+</div>  --}}
 
 
 
