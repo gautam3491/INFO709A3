@@ -67,7 +67,12 @@
       height: auto;
     }
     .panel:hover {
-      /* transform: scale(1.09);  */
+      transform: scale(1.09); 
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+
+    .login:hover {
+      transform: scale(1); 
       box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
     }
 
@@ -81,7 +86,7 @@
       margin-right:35px;
       margin-left:35px;
       width: auto;
-      height: 700px;
+      height: 800px;
     }
 
     .panel-heading{

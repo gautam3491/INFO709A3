@@ -3,7 +3,7 @@
 @section('content')
                 <br>
                 <div class="container loginform" style="width: 35%">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default login">
                         <div class="panel-heading"><b><h3>{{ __('Login') }}</h3><b></div>
                         <div class="panel-body loginregisterbody">
                     <form method="POST" action="{{ route('login') }}">

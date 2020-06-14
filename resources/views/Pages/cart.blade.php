@@ -76,10 +76,10 @@
 </tbody>
 </table>
 
-{{-- <a href="{{url('addorder/'.Auth::user()->id)}}" class="btn btn-success align-right" style="float:right">BUY</a> --}}
-<button type="button" class="btn btn-success align-right" data-toggle="modal" data-target="#myModal" style="float:right">
+<a href="{{url('addorder/'.Auth::user()->id)}}" class="btn btn-success align-right" style="float:right">BUY</a>
+{{-- <button type="button" class="btn btn-success align-right" data-toggle="modal" data-target="#myModal" style="float:right">
   Buy
-</button>
+</button> --}}
     
 </div>
 </div>
