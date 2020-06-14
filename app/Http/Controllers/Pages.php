@@ -25,8 +25,8 @@ class Pages extends Controller
     public function items($id)
     {
         $name = Category::select('name')->where('id', $id)->first();
-        $items = Items::where('categoryid', $id)->get();
-        return view('pages.beer', ['items' => $items, 'names' => $name->name]);
+        $items = Items::where('categoryid', $id)->orderByDesc('created_at')->get();
+        return view('pages.food', ['items' => $items, 'names' => $name->name]);
     }
 
     //show item description
@@ -35,25 +35,6 @@ class Pages extends Controller
         $data = Items::where('id', $id)->first();
         return $data;
     }
-
-    // public function showBeer()
-    // {
-    //     $items = Items::where('categoryid', '1')->get();
-    //     return view('pages.beer', ['items' => $items]);
-    // }
-
-    // public function showWine()
-    // {
-    //     $items = Items::where('categoryid', '2')->get();
-    //     return view('pages.wine', ['items' => $items]);
-    // }
-
-    // public function showRTD()
-    // {
-    //     $items = Items::where('categoryid', '3')->get();
-    //     return view('pages.rtd', ['items' => $items]);
-    // }
-
 
     //to show items according to search value
     public function showSearch(Request $request)
